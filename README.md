@@ -1,3 +1,5 @@
+[![CI](https://github.com/LucasF087/gerenciador-tarefas-agil/actions/workflows/python-app.yml/badge.svg)](https://github.com/LucasF087/gerenciador-tarefas-agil/actions/workflows/python-app.yml)
+
 # Gerenciador de Tarefas Ágil
 
 **Repositório:** https://github.com/LucasF087/gerenciador-tarefas-agil
