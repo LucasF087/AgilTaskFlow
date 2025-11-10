@@ -106,7 +106,7 @@ AgilTaskFlow/
 
 ## 🚀 **Instalação e Execução (Windows — PowerShell)**
 
-> 💡 *Estes passos funcionam no Windows PowerShell. Em Linux/macOS, use `python3` e `source venv/bin/activate`.*
+💡 *Estes passos funcionam no Windows PowerShell. Em Linux/macOS, use `python3` e `source venv/bin/activate`.*
 
 ### 1️⃣ Criar e ativar o ambiente virtual:
 
@@ -140,6 +140,7 @@ python src/app.py
 
 $env:FLASK_APP = "src.app"
 
+```
 flask run
 
 ---
