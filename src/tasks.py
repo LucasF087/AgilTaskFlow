@@ -15,7 +15,7 @@ class Task:
     priority: Optional[str] = "medium"
 
 def _read_all() -> List[Task]:
-    if not DATA_FILE.exists():
+    if not DATA_FILE.exists() or DATA_FILE.stat().st_size == 0:  # arquivo não existe ou vazio
         return []
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         raw = json.load(f)

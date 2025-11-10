@@ -1,17 +1,19 @@
-import os, tempfile
+import tempfile
+from pathlib import Path
 from src import tasks
 
 def setup_function():
-    tasks.DATA_FILE = os.path.join(tempfile.gettempdir(), "test_tasks.json")
+    # define DATA_FILE temporário
+    tasks.DATA_FILE = Path(tempfile.gettempdir()) / "test_tasks.json"
     try:
-        os.remove(tasks.DATA_FILE)
-    except:
+        tasks.DATA_FILE.unlink()  # remove se existir
+    except FileNotFoundError:
         pass
 
 def teardown_function():
     try:
-        os.remove(tasks.DATA_FILE)
-    except:
+        tasks.DATA_FILE.unlink()
+    except FileNotFoundError:
         pass
 
 def test_create_and_get():
